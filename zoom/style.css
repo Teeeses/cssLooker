@@ -1,0 +1,42 @@
+
+#zoom {
+    border:2px solid white;
+ 
+    position:absolute;
+    height:50px;
+    width:50px;
+ 
+    -moz-box-shadow:0 0 5px #777, 0 0 10px #aaa inset;
+    -webkit-box-shadow:0 0 5px #777;
+    box-shadow:0 0 5px #777, 0 0 10px #aaa inset;
+ 
+    -moz-border-radius:90px;
+    -webkit-border-radius:90px;
+    border-radius:90px;
+  
+}
+
+
+
+#axis {
+  background-image: url(photo.jpg);
+  width: 800px;
+  height: 500px;
+  background-size: cover;
+}
+
+#axis:hover #zoom {
+    transform: translate(750px,450px);
+    -webkit-transform: translate(750px,450px);
+    -o-transform: translate(750px,450px);
+    -moz-transform: translate(750px,450px);
+}
+
+
+#zoom {
+    position: absolute;
+    -webkit-transition: all 5s ease-in-out;
+    -moz-transition: all 5s ease-in-out;
+    -o-transition: all 5s ease-in-out;
+}
+
