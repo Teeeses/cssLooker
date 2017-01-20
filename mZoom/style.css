@@ -1,0 +1,22 @@
+#axis {
+	background-image: url(photo.jpg);
+	background-size: cover;
+	width: 600px;
+	height:400px;
+	position: absolute;
+	margin: 65px 100px;
+}
+
+.bigaxis {
+	background-image: url(photo.jpg);
+	width: 800px;
+	height: 530px;
+	background-size: cover;
+	position: absolute;
+	display: block;
+}
+
+#axis:hover {
+   /*position: absolute; 
+   clip: rect(0px, 200px, 200px, 0px); */
+}

@@ -1,42 +1,70 @@
-
-#zoom {
-    border:2px solid white;
- 
-    position:absolute;
-    height:50px;
-    width:50px;
- 
-    -moz-box-shadow:0 0 5px #777, 0 0 10px #aaa inset;
-    -webkit-box-shadow:0 0 5px #777;
-    box-shadow:0 0 5px #777, 0 0 10px #aaa inset;
- 
-    -moz-border-radius:90px;
-    -webkit-border-radius:90px;
-    border-radius:90px;
-  
+.glass {
+    border: 1px solid #ccc;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 280px;
 }
 
-
-
-#axis {
-  background-image: url(photo.jpg);
-  width: 800px;
-  height: 500px;
-  background-size: cover;
+.glass > div {
+    height: 33.33%;
+    width: 33.333%;
+    z-index: 1;
+    float: left;
+    display: inline-block;
+    position: relative;
 }
 
-#axis:hover #zoom {
-    transform: translate(750px,450px);
-    -webkit-transform: translate(750px,450px);
-    -o-transform: translate(750px,450px);
-    -moz-transform: translate(750px,450px);
+.top_left:hover .image {
+    transform: translate(20%, 20%) scale(1.5);
 }
 
+.top_centre:hover .image {
+    transform: translate(0%, 20%) scale(1.5);
+}
 
-#zoom {
+.top_right:hover .image {
+    transform: translate(-20%, 20%) scale(1.5);
+}
+
+.middle_left:hover .image {
+    transform: translate(20%, 0) scale(1.5);
+}
+
+.middle_centre:hover .image {
+    transform: translate(0, 0) scale(1.5);
+}
+
+.middle_right:hover .image {
+    transform: translate(-20%, 0) scale(1.5);
+}
+
+.bottom_left:hover .image {
+    transform: translate(20%, -20%) scale(1.5);
+}
+
+.bottom_centre:hover .image {
+    transform: translate(0, -20%) scale(1.5);
+}
+
+.bottom_right:hover .image {
+    transform: translate(-20%, -20%) scale(1.5);
+}
+
+.image {
+    transition: all 1.5s ease;
+    display: block;
+    max-width: 100%;
     position: absolute;
-    -webkit-transition: all 5s ease-in-out;
-    -moz-transition: all 5s ease-in-out;
-    -o-transition: all 5s ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
 
+.container {
+    width: 100%;
+    text-align: center;
+}
